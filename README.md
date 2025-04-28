@@ -26,32 +26,30 @@ autoDataEntry utilise les librairies suivantes:
 - pyperclip
 - re
 
-
 ## Installation:
 - Installer Python
-- Importer le projet soit avec les commandes git, soit en téléchargeant les fichiers avec l’interface de github.
-- Ouvrir le répertoire téléchargé et tester votre installation de python en ouvrant une fenêtre de commande, puis en entrant la commande suivante : (py --version) 
-Normalement votre version de python doit apparaître
+- Importer le projet soit avec les commandes git, soit en téléchargeant les fichiers avec l’interface de github
+- Ouvrir le répertoire téléchargé et tester votre installation de python en ouvrant une fenêtre de commande, puis en entrant la commande suivante : (`py --version`). Normalement votre version de python doit apparaître
 - Installer pyautogui: `py pyautogui`
 - Installer time: `py time`
 - Installer csv: `py csv`
 - Installer pyperclip: `py pyperclip`
 - Installer re: `py re`
-- Conseil numéro 1: Installer un éditeur de code (par exemple VsCode). 
-- Conseil numéro 2: Pensez à activer le support du langage Python dans les extensions de Vscode. Cela vous permettra de sélectionner plus facilement les méthodes que vous utiliserez pour configurer votre propre outil de pilotage d'applications.
+- Conseil numéro 1: Installer un éditeur de code (par exemple VsCode) 
+- Conseil numéro 2: Pensez à activer le support du langage Python dans les extensions de Vscode. Cela vous permettra de sélectionner plus facilement les méthodes que vous utiliserez pour configurer votre propre outil de pilotage d'applications
 ![Support Python](./assets/images/README.md/supportPython.png)
-- Conseil numéro 3: Si vous comptez utiliser ce programme pour réaliser de la saisie de grandes quantités de données sur un site Web, il peut être utile (dans certains cas), de désactiver au préalable l'historique de recherche.
+- Conseil numéro 3: Si vous comptez utiliser ce programme pour réaliser de la saisie de grandes quantités de données sur un site Web, il peut être utile (dans certains cas), de désactiver au préalable l'historique de recherche
 ![Exemple avec Firefox](./assets/images/README.md/HistoriqueDesRechercheFirefox.png)
 
 ## Utilisation:
-Pour utiliser ensuite autaDataEntry:
+Pour utiliser autaDataEntry:
 - Ouvrez le programme à piloter (Il doit être visible sur l'écran)
-- Lancez le .bat **autoDataEntry.bat.** 
-- Placez **autoDataEntry.bat.**  en dehors de la fenêtre du programme à piloter (par exemple sur un deuxième écran). 
+- Lancez le .bat **autoDataEntry.bat** 
+- Placez **autoDataEntry.bat**  en dehors de la fenêtre du programme à piloter (par exemple sur un deuxième écran) 
 - Appuyez sur n'importe qu'elle touche. Le traitement va se lancer, avec les actions que vous aurez demandées (voir la partie: **Configuration**)
 
 **Note:** 
-Pour fonctionner correctement, le .bat autoDataEntry.bat doit s'ouvrir soit sur un deuxième écran, soit en dehors de la zone utilisée par le programme à piloter. En effet, s'il recouvre une partie d'un formulaire à piloter, les méthodes de recherche ne pourront pas trouver ce formulaire.  
+Pour fonctionner correctement, le .bat autoDataEntry.bat doit se trouver en dehors de la zone utilisée par le programme à piloter. En effet, s'il recouvre une partie d'un formulaire à piloter, les méthodes de recherche ne pourront pas trouver ce formulaire.  
 
 Si vous préférez lancer autoDataEntry en ligne de commande:
 - Ouvrez une fenêtre de commande dans le répertoire d'installation de autoDataEntry
@@ -59,7 +57,6 @@ Si vous préférez lancer autoDataEntry en ligne de commande:
 ```
 py main.py
 ```
-
 
 ## Configuration:
 
@@ -70,7 +67,7 @@ Exemple:
 ![Exemple simple de configuration](./assets/images/README.md/exempleSimple.png)
 
 ### Configuration du répertoire des captures:
-Pour fonctionner correctement, autoDataEntry aura besoin d'accéder aux captures d'écran représentant des portions de l'interface graphique, du programme avec lequel on doit interagir. Par exemple un champ de saisie dans lequel on veut entrer du texte, où une case à cocher sur laquelle on veut cliquer.
+Pour fonctionner correctement, autoDataEntry aura besoin d'accéder aux captures d'écran représentant des portions de l'interface graphique, du programme avec lequel il devra interagir. Par exemple un champ de saisie dans lequel il doit entrer du texte, ou une case à cocher sur laquelle il doit cliquer.
 
 Par défaut, autoDataEntry est configuré pour aller chercher les images sous le répertoire:  
 *assets/images/captures/*  
@@ -80,16 +77,14 @@ Vous pouvez modifier ce chemin en modifiant le paramètre optionnel:
 Exemple:  
 `autoDataEntry.gloCheminCaptures = "nouveauRépertoireCaptures/"`
 
-
-Des exemples de captures d'écran se trouve sous:  
+Des exemples de captures d'écran se trouvent sous:  
 *zonesARechercher\exemples*
 
 Ces captures d'exemples avaient été utilisées pour mes propres besoins.
 
-
 ### Configuration du répertoire du fichier CSV de base de données:
-Pour la saisie de longue quantité de données dans un programme, autoDataEntry peut importer les données depuis un fichier CSV.  
-Il est également capable d'ajouter une colonne de donnée à la fin de chaque ligne en précisant si la donnée a pu être importée ou nom. Ceci est très pratique! En effet, cela permet de corriger les éventuelles erreurs et de relancer le traitement des données, sans risque de réimporter dans le programme à piloter, plusieurs fois le même jeu de données.
+Pour la saisie d'une grande quantité de données dans un programme, autoDataEntry peut importer les données depuis un fichier CSV.  
+Il est également capable d'ajouter une colonne de donnée à la fin de chaque ligne, en précisant si la donnée a pu être importée ou nom. Ceci est très pratique! En effet, cela permet de corriger les éventuelles erreurs et de relancer le traitement des données, sans risque de réimporter dans le programme à piloter, plusieurs fois le même jeu de données.
 
 Par défaut, autoDataEntry va rechercher un fichier csv appelé base.csv, dans le répertoire d'installation.   
 - Vous pouvez modifier ce chemin en modifiant le paramètre optionnel:  
@@ -105,15 +100,13 @@ Exemple:
 `autoDataEntry.csvNom = "nouveauNom.csv"`  
 `autoDataEntry.csvDelimiteur = " "`
 
-
 ### Méthodes de base autoDataEntry:
 autoDataEntry dispose de différentes fonctionnalités/méthodes, décrites ci-dessous.
 
 Pour obtenir de l'aide sur les différentes méthodes utilisables, entrer simplement `autoDataEntry.`  
-Un menu d'aide décrivant les différentes méthodes doit apparaître (nécessite l'installation du support du langage Python). 
+Un menu d'aide décrivant les différentes méthodes doit apparaître. 
 ![Menu d'aide](assets/images/README.md/Aide.png)
 (Ce menu nécessite l'installation du *support du langage Python* => Voir le chapitre **Installation**)
-
 
 #### afficherCoordonneesCapture:
 Affiche et renvoie les coordonnées et dimensions d'un champ.  
@@ -146,7 +139,6 @@ Cette méthode recherche en boucle sur le site la capture passée en paramètre.
 - pFlagAffiMessTrouve    => (Optionnel) Affiche un message si capture trouvée
 - flagArreterSiNonTrouve => (Optionnel) Arrête le script python si la capture n'est pas trouvée
 
-
 #### verifierPasApparition:
 Vérifie que le programme à piloter n'affiche PAS une alerte (message d'erreur, fenêtre indésirable, messageBox compromettant...)  
 - Parfois certaines alertes mettent du temps à apparaître ou apparaissent progressivement.  
@@ -162,15 +154,12 @@ Vérifie que le programme à piloter n'affiche PAS une alerte (message d'erreur,
 Met en pause le programme pendant la durée spécifiée en secondes.  
 Si aucune durée n'est spécifiée, la pause dure 1/2 seconde.
 
-
 #### cliquerSur:
 Recherche un champ (passé en paramètre sous forme d'une capture PNG) et clique dedans.  
 - positionClic           => Par défaut le clic se fait au centre du champ trouvé.  
                               Valeurs possibles (centré, gauche, droite)  
 - offsetX                => Décalage en pixel (positif ou négatif) par rapport à la positionClic  
 - flagArreterSiNonTrouve => A True (valeur par défaut), arrête le programme si le champ n'est pas localisé. A False, le programme continue
-
-
 
 #### cliquerSurSexe:
  Permet de détecter puis de cliquer sur l'un des deux boutons radio SEXE fourni en exemple (voir le répertoire captureExemples des assets).  
@@ -182,7 +171,6 @@ Recherche un champ (passé en paramètre sous forme d'une capture PNG) et clique
 
 Cette méthode est en fait destinée à cliquer sur un type de bouton radio bien précis (voir le répertoire captureExemples des assets). Si les radio boutons ne sont pas exactement les mêmes (probables), le décalage est les captures d'écran devront bien sûr être adaptés. 
 
-
 #### scrollSouris:
 Permet de simuler la molette de la souris pour monter ou descendre l'ascenseur du navigateur.
 - Un nombre positif de pixel monte l'ascenseur.
@@ -191,18 +179,17 @@ Permet de simuler la molette de la souris pour monter ou descendre l'ascenseur d
 #### ecrire:
 Écrit un texte passé en paramètre à l'endroit où la souris vient de cliquer, après appel de la fonction: `cliquerSur`
 
-
 ### Méthodes avancées de base autoDataEntry:
 Les méthodes avancées de autoDataEntry permettent la gestion du fichier base.csv.
-Celui-ci doit avoir la structure suivante: 
-donnée1;donnée2;donnée3...;donnéeX;NON
+Celui-ci doit avoir la structure suivante:   
+```donnée1;donnée2;donnée3...;donnéeX;NON```
 
 Un fichier d'exemple est disponible dans le répertoire d'installation de autoDataEntry.
 
 #### lireCsv:
 Lit ligne par ligne le fichier CSV fourni et lance, pour chaque ligne, une suite d'opération définie dans la méthode: `effectuerTraitement`.
 
-Rappel: Pour modifier le nom et le chemin du fichier CSV, voir la section: **Configuration du répertoire du fichier CSV de base de données**
+Rappel: Pour modifier le nom et le chemin du fichier CSV, voir la section: **Configuration du répertoire du fichier CSV de base de données**.
 
 Pour chaque ligne traitée du fichier CSV, en plus d'appeler `effectuerTraitement`, `lireCsv` va également appeler la méthode `majCsv`, qui va modifier la dernière colonne en indiquant si les instructions ont été correctement effectuées  dans le programme à piloter (OUI). 
 
@@ -225,8 +212,7 @@ Exemple:
 - base[1] => deuxième colonne du fichier CSV
 - base[10] =>onzième colonne du fichier CSV
 
-
 ### Problèmes connus:
-- Il arrive avec certaines applications à piloter, que leurs formulaires sont utilisables qu'une fois que l'application a le focus.   
+- Il arrive avec certaines applications à piloter, que leurs formulaires ne soient utilisables qu'une fois que l'application a le focus.   
 => *Dans ce cas, une solution consiste à demander au préalable à autoDataEntry de cliquer à un endroit précis de l'application à piloter (par exemple l'entête de la fenêtre).*
 
