@@ -30,11 +30,9 @@ autoDataEntry utilise les librairies suivantes:
 - Installer Python
 - Importer le projet soit avec les commandes git, soit en téléchargeant les fichiers avec l’interface de github
 - Ouvrir le répertoire téléchargé et tester votre installation de python en ouvrant une fenêtre de commande, puis en entrant la commande suivante : (`py --version`). Normalement votre version de python doit apparaître
-- Installer pyautogui: `py pyautogui`
-- Installer time: `py time`
-- Installer csv: `py csv`
-- Installer pyperclip: `py pyperclip`
-- Installer re: `py re`
+- Installer pyautogui: `pip intall pyautogui`
+- Installer pyperclip: `pip install pyperclip`
+- Mettre à jour Pillow (en cas de problème): `pip install --upgrade Pillow`
 - Conseil numéro 1: Installer un éditeur de code (par exemple VsCode) 
 - Conseil numéro 2: Pensez à activer le support du langage Python dans les extensions de Vscode. Cela vous permettra de sélectionner plus facilement les méthodes que vous utiliserez pour configurer votre propre outil de pilotage d'applications
 ![Support Python](./assets/images/README.md/supportPython.png)
