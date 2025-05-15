@@ -34,7 +34,7 @@ autoDataEntry utilise les librairies suivantes:
 - Installer pyperclip: `pip install pyperclip`
 - Mettre à jour Pillow (en cas de problème): `pip install --upgrade Pillow`
 - Conseil numéro 1: Installer un éditeur de code (par exemple VsCode) 
-- Conseil numéro 2: Pensez à activer le support du langage Python dans les extensions de Vscode. Cela vous permettra de sélectionner plus facilement les méthodes que vous utiliserez pour configurer votre propre outil de pilotage d'applications
+- Conseil numéro 2: Pensez à activer le support du langage Python dans les extensions de Vscode. Cela vous permettra de sélectionner plus facilement les méthodes que vous utiliserez pour configurer votre propre outil de pilotage d'applications    
 ![Support Python](./assets/images/README.md/supportPython.png)
 - Conseil numéro 3: Si vous comptez utiliser ce programme pour réaliser de la saisie de grandes quantités de données sur un site Web, il peut être utile (dans certains cas), de désactiver au préalable l'historique de recherche
 ![Exemple avec Firefox](./assets/images/README.md/HistoriqueDesRechercheFirefox.png)
